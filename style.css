@@ -1,0 +1,375 @@
+@-webkit-keyframes fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+@-moz-keyframes    fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+@-o-keyframes      fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+@keyframes         fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+
+
+body{
+    font-family: Montserrat,sans-serif;
+    margin: 0;
+    -webkit-animation: fade-in 2s linear;
+    -moz-animation: fade-in 2s linear;
+    -o-animation: fade-in 2s linear;
+    animation: fade-in 2s linear;
+}
+/*slider style*/
+@media (max-width: 1200px){
+    #slides{
+        height: 100vh;
+    }
+}
+@media (min-width: 1366px){
+    #slides{
+        height: 91vh;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1366px){
+    #slides{
+        height: 91vh;
+    }
+}
+
+#slides{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    display: grid;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+@media (min-width: 1366px){
+    .slide{
+        grid-template-rows: 0fr;
+        align-content: space-around;
+    }
+}
+@media (max-width: 1200px){
+    .slide{
+        align-content: end;
+        padding-bottom: 4vh;
+    }
+}
+
+@media (min-width: 1366px){
+    .textArea{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 17vw;
+    }
+}
+@media (max-width: 1200px){
+    .textArea{
+        display: grid;
+        grid-gap: 11vw;
+    }
+}
+
+.textLeft{
+    display: grid;
+    place-content: center;
+    grid-row-gap: 2vh;
+}
+
+.name{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 100.56%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    width: 506px;
+    height: 163px;
+}
+@media (max-width: 1200px){
+    .name{
+        text-align: center;
+        width: 100vw;
+    }
+}
+
+.tagline{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 364px;
+    height: 68px;
+}
+@media (max-width: 1200px){
+    .tagline{
+        text-align: center;
+        justify-self: center;
+        font-size: 2vh;
+        width: 100vw;
+    }
+}
+
+.textRight{
+    display: grid;
+}
+@media (max-width: 1200px){
+    .textRight{
+        grid-gap: 2vh;
+    }
+}
+
+.blockCase{
+    display: grid;
+}
+@media (max-width: 1200px){
+    .blockCase{
+        grid-gap: 1vh;
+    }
+}
+
+.blockWork{
+    display: grid;
+}
+@media (max-width: 1200px){
+    .blockWork{
+        grid-gap: 1vh;
+    }
+}
+.text{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+}
+@media (max-width: 1200px){
+    .text{
+        font-size: 2vh;
+    }
+}
+
+.linkCase{
+    text-decoration: none;
+    justify-self: center;
+    color: #FFFFFF;
+}
+
+
+.imgAr{
+    margin-left: 0.5vw;
+}
+@media (max-width: 1200px){
+    .imgAr{
+        height: 1vh;
+    }
+}
+
+.numText{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+}
+@media (max-width: 1200px){
+    .numText{
+        font-size: 2vh;
+    }
+}
+
+.linkWork{
+    justify-self: center;
+    text-decoration: none;
+}
+
+.textLink{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    transition: color 0.25s ease;
+}
+@media (max-width: 1200px){
+    .textLink{
+        font-size: 2vh;
+    }
+}
+
+.textLink:hover{
+    color: black;
+}
+
+@media (min-width: 1366px){
+    .black{
+        color: black;
+    }
+}
+
+
+.slide:nth-of-type(1){
+    background-image: url("image/image1.png");
+}
+.slide:nth-of-type(2){
+    background-image: url("image/image22.png");
+}
+.slide:nth-of-type(3){
+    background-image: url("image/image3.png");
+}
+
+/********/
+
+
+.pageContent{
+    display: grid;
+    box-sizing: border-box;
+}
+
+.header{
+    position: absolute;
+    z-index: 3;
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+}
+
+@media (max-width: 1200px){
+    .header{
+        margin-top: 2.2vh;
+        margin-bottom: 2.2vh;
+        display: grid;
+        
+    }
+}
+
+@media (min-width: 1366px){
+    .header{
+        display: grid;
+        grid-template-columns: 0fr 1fr 1fr;
+        width: 93vw;
+        grid-gap: 4vw;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+}
+
+
+.headerTop{
+    
+}
+
+.logoTop{
+    
+}
+
+.imgLogo{
+    height: 76px;
+    width: 76px;
+}
+
+@media (min-width: 1366px){
+    .topMenu{
+        display: grid;
+        grid-template-columns: 3vw 7vw 2vw 4vw;
+        justify-items: center;
+        margin-top: 1.5vh;
+        grid-gap: 4vw;
+    }
+}
+@media (max-width: 1200px){
+    .topMenu{
+        display: grid;
+        margin-top: 1.5vh;
+        grid-gap: 4vw;
+    }
+}
+
+.linkPage{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100.56%;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.25s ease;
+    cursor: pointer;
+}
+.linkPage:hover{
+    color: black;
+}
+@media (max-width: 1200px){
+    .linkPage{
+        font-size: 2vh;
+    }
+    
+}
+
+@media (min-width: 1366px){
+    .topInfo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin-top: 1.25vh;
+    }
+}
+@media (max-width: 1200px){
+    .topInfo{
+        display: grid;
+        margin-top: 1.25vh;
+        grid-gap: 1vh;
+    }
+}
+
+.number{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    justify-self: end;
+}
+@media (max-width: 1200px){
+    .number{
+        justify-self: start;
+        font-size: 2vh;
+    }
+}
+
+.mail{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.25s ease;
+}
+@media (max-width: 1200px){
+    .mail{
+        font-size: 1.5vh;
+    }
+}
+
+.mail:hover{
+    color: black;
+}
+
